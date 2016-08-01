@@ -1,0 +1,51 @@
+html, body{
+  height: 100%;
+  widows: 100%;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
+
+a, a:hover, a:visited, a:link, a:active{
+  color:inherit;
+}
+
+.body{
+  widows: 100%;
+  height: 100%;
+
+}
+
+#title-bar {
+  -webkit-app-region: drag;
+  height: 37px;
+  color: #ADADAD;
+  background-color: #2D2D30;
+}
+
+.title-bar-title{
+  line-height:37px;
+  font-size: 15px;
+  color:rgb(255, 255, 255);
+}
+
+.title-bar-btns{
+  position: fixed;
+  left:0;
+  top:0;
+}
+
+.title-btn md-icon{
+  width:70%;
+}
+
+.title-btn-normal md-icon{
+  fill:rgb(235, 235, 235);
+}
+
+.title-btn-warn md-icon{
+  fill:rgb(205, 14, 14);
+}

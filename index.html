@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="blogger_manage_app">
+<head>
+	<meta charset="UTF-8">
+	<title>Git Page Blogger</title>
+	<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/default.css">
+	<link rel="stylesheet" href="static/css/main.css">
+	<script src="node_modules/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="node_modules/angular-aria/angular-aria.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="node_modules/angular-animate/angular-animate.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="node_modules/angular-route/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="node_modules/angular-material/angular-material.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="node_modules/angular-messages/angular-messages.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="node_modules/moment/min/moment.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/js/default.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/js/controller.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="body" layout="column">
+		<div id="title-bar" layout="row">
+			<div class="title-bar-btns" ng-controller="windowCtrl">
+				<md-button ng-click="close()" class="md-icon-button md-mini title-btn title-btn-warn"><md-icon md-svg-src="static/img/close.svg"></md-icon></md-button>
+				<md-button ng-click="maximize()" class="md-icon-button md-mini title-btn title-btn-normal"><md-icon md-svg-src="static/img/window-maximize.svg"></md-icon></md-button>
+				<md-button ng-click="minimize()" class="md-icon-button md-mini title-btn title-btn-normal"><md-icon md-svg-src="static/img/window-minimize.svg"></md-icon></md-button>
+			</div>
+			<span flex></span>
+			<div class="title-bar-title">Git Page Blogger</div>
+			<span flex></span>
+		</div>
+		<div class="contain" layout="row" flex ng-controller="windowCtrl">
+			<md-button ng-click="toggleLeft()" class="md-primary sidenav-btn" hide-gt-md>
+				<md-icon md-svg-src="static/img/menu.svg"></md-icon>
+			</md-button>
+			<md-sidenav flex="20"
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-md')"
+        md-disable-backdrop
+        md-whiteframe="4">
+				<md-toolbar class="nav-background">
+					<h1 class="md-toolbar-tools">Git Page Blogger</h1>
+				</md-toolbar>
+				<md-content layout-padding class="nav-background">
+					<md-list ng-cloak class="nav-background">
+						<md-list-item class="nav-background">
+							<a ng-href="#/" class="md-button md-ink-ripple">Dashboard</a>
+						</md-list-item>
+						<md-list-item class="nav-background">
+							<a ng-href="#/preview" class="md-button md-ink-ripple">Preview</a>
+						</md-list-item>
+					</md-list>
+				</md-content>
+        </md-sidenav>
+		</div>
+	</div>
+
+</body>
+</html>
